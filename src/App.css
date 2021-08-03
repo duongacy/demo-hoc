@@ -139,3 +139,10 @@ main {
 .lh-tight {
     line-height: 1.25;
 }
+
+
+/* custom */
+
+.btn-none-shadow:focus {
+    box-shadow: none !important;
+}
