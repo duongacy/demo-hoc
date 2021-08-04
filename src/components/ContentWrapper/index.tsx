@@ -1,15 +1,18 @@
-import React from 'react'
-import { IChildren } from '../../common/formatTypes/ComponentChildren'
+import React from "react";
 
-interface IContentWrapperProps{
-    children: IChildren;
+interface IContentWrapperProps {
+  title?: string;
 }
-const ContentWrapper:React.FC<IContentWrapperProps> = ({children}) => {
-    return (
-        <div className="container py-5">
-            {children}
-        </div>
-    )
-}
+const ContentWrapper: React.FC<IContentWrapperProps> = ({
+  children,
+  title,
+}) => {
+  return (
+    <div className="container py-5">
+      <h2>{title}</h2>
+      {children}
+    </div>
+  );
+};
 
-export default ContentWrapper
+export default ContentWrapper;

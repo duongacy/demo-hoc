@@ -143,6 +143,18 @@ main {
 
 /* custom */
 
-.btn-none-shadow:focus {
+.box-shadow-focus-none:focus {
     box-shadow: none !important;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-md {
+    font-size: 1rem;
+}
+
+.text-lg {
+    font-size: 1.25rem !important;
 }

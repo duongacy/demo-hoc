@@ -1,3 +1,3 @@
 export type IInputValue = string | File | File[];
-export type IInputCallBackChange = (name: string, value: IInputValue) => void;
 export type ISize = "sm" | "md" | "lg";
+export type IVariant = | "primary" | "secondary" | "success" | "info" | "warning" | "danger" | "light" | "dark";

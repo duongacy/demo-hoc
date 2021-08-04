@@ -4,9 +4,9 @@ import About from "./pages/About";
 import User from "./pages/User";
 import Home from "./pages/Home";
 import Header from "./components/Header";
-import InputPage from "./pages/input/InputPage";
 import ContentWrapper from "./components/ContentWrapper";
-
+import InputPage from "./pages/Input";
+import SelectPage from "./pages/Select";
 function App() {
   return (
     <Router>
@@ -22,35 +22,22 @@ function App() {
             </svg>
             <span className="fs-5 fw-semibold">Collapsible</span>
           </a>
-          <ul className="list-unstyled ps-0">
-            <li className="mb-1">
-              <button className="btn align-items-center outline-0">
+          <ul className="list-unstyled px-5">
+            <li>
+              <Link
+                to="/input"
+                className="link-dark rounded text-decoration-none"
+              >
                 Input
-              </button>
-              <div className="collapse show" id="home-collapse">
-                <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li>
-                    <Link to="/input" className="link-dark rounded">
-                      Input
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="link-dark rounded">
-                      Select
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="link-dark rounded">
-                      Radio button
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="link-dark rounded">
-                      Checkbox
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/select"
+                className="link-dark rounded text-decoration-none"
+              >
+                Select
+              </Link>
             </li>
           </ul>
         </div>
@@ -58,6 +45,9 @@ function App() {
           <Switch>
             <Route path="/input">
               <InputPage />
+            </Route>
+            <Route path="/select">
+              <SelectPage />
             </Route>
             <Route path="/about">
               <About />
